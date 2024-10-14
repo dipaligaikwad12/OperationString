@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .input-box{
+            width: 800px;
+            height: 150px;
+            text-align: center;
+            display: block;
+            margin:20px auto;
+            margin-bottom: 5px;
+            font-size: 25px;
+            border-radius: 20px;
+            border: 2px solid hsl(330, 76%, 52%) ;
+        }
+        .heading{
+            text-align: center;
+        }
+        body{
+            background-color: #fdb8db;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            font-size: 18px;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            background-color:  hsl(330, 76%, 52%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            box-shadow: 2px 0px 2px 3px  rgb(126, 9, 96);
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 class="heading">String Operations</h1>
+    <input type="text" placeholder="Enter any string" class="input-box" id="inputBox">
+    <br><br>
+    <input type="text" placeholder="Output of String" class="input-box" id="outputBox">
+
+    <div class="btn-container">
+        <button class="btn" onclick="ucase()">Uppercase</button>
+        <button class="btn">Uppercase</button>
+        <button class="btn">Uppercase</button>
+        <button class="btn">Uppercase</button>
+    </div>
 </body>
 </html>
