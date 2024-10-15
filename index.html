@@ -1,61 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .input-box{
+        .input-box {
             width: 900px;
             height: 150px;
             text-align: center;
             display: block;
-            margin:20px auto;
+            margin: 20px auto;
             margin-bottom: 5px;
             font-size: 25px;
             border-radius: 20px;
-            border: 2px solid hsl(330, 76%, 52%) ;
+            border: 2px solid hsl(330, 76%, 52%);
+            font-family:Arial, Helvetica, sans-serif;
         }
-        .heading{
+
+        .heading {
             text-align: center;
         }
-        body{
+
+        body {
             background-color: #fdb8db;
         }
-        .btn-container{
+
+        .btn-container {
             display: flex;
             justify-content: center;
         }
-        .btn{
+
+        .btn {
             font-size: 18px;
             width: 180px;
             margin: 20px 40px;
             padding: 10px 20px;
-            background-color:  hsl(330, 76%, 52%);
+            background-color: hsl(330, 76%, 52%);
             color: #fff;
             border: none;
             border-radius: 10px;
         }
-        .btn:hover{
-            box-shadow: 2px 0px 2px 3px  rgb(126, 9, 96);
+
+        .btn:hover {
+            box-shadow: 2px 0px 2px 3px rgb(126, 9, 96);
         }
     </style>
 </head>
+
 <body>
     <h1 class="heading">String Operations</h1>
-    <input type="text" placeholder="Enter any string" class="input-box" id="inputBox">
+    <input type="text" placeholder="Enter any string" class="input-box" id="input">
     <br><br>
-    <input type="text" placeholder="Output of String" class="input-box" id="outputBox">
+    <input type="text" placeholder="Output of String" class="input-box" id="output">
 
     <div class="btn-container">
-        <button class="btn" onclick="textOperation('upperCase')">Upper Case</button>
+        <button class="btn" onclick="textOperation('uppercase')">Upper Case</button>
         <button class="btn" onclick="textOperation('lowerCase')">Lower Case</button>
         <button class="btn" onclick="textOperation('wordCount')">Word Count</button>
         <button class="btn" onclick="textOperation('charCount')">Character Count</button>
     </div>
 
     <script>
-       function textOperation(op)
+        const inputElement = document.getElementById("input");
+        const outputElement = document.getElementById("output");
+
+       // function upperCase() {
+         //   const inputText = inputElement.value;
+           // outputElement.value = inputText.toUpperCase();
+        //}
+
+        function textOperation(op) {
+         //   const inputElement = document.getElementById('inputBox');
+           // const outputElement = document.getElementById('outputBox');
+
+            //if(op=='uppercase'){
+              //  const inputText = inputElement.value;
+                //outputElement.value = inputText.toUpperCase();
+            //}
+
+            switch (op) {
+                case 'uppercase':
+                    outputElement.value = inputElement.value.toUpperCase();
+                   break;
+                case 'lowerCase':
+                    outputElement.value = inputElement.value.toLowerCase();
+                    break;
+                case 'wordCount':
+                    const totalWords = inputElement.value.split(" ").length;
+                  outputElement.value = `Word Count: ${totalWords}`
+                    break;
+                case 'charCount':
+                    const totalCharCount = inputElement.value.length;
+                    outputElement.value = `Character Count: ${totalCharCount}`
+                   break;
+            }
+     }
     </script>
 </body>
+
 </html>
