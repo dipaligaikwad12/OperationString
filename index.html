@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         .input-box{
-            width: 800px;
+            width: 900px;
             height: 150px;
             text-align: center;
             display: block;
@@ -28,6 +28,7 @@
         }
         .btn{
             font-size: 18px;
+            width: 180px;
             margin: 20px 40px;
             padding: 10px 20px;
             background-color:  hsl(330, 76%, 52%);
@@ -47,10 +48,14 @@
     <input type="text" placeholder="Output of String" class="input-box" id="outputBox">
 
     <div class="btn-container">
-        <button class="btn" onclick="ucase()">Uppercase</button>
-        <button class="btn">Uppercase</button>
-        <button class="btn">Uppercase</button>
-        <button class="btn">Uppercase</button>
+        <button class="btn" onclick="textOperation('upperCase')">Upper Case</button>
+        <button class="btn" onclick="textOperation('lowerCase')">Lower Case</button>
+        <button class="btn" onclick="textOperation('wordCount')">Word Count</button>
+        <button class="btn" onclick="textOperation('charCount')">Character Count</button>
     </div>
+
+    <script>
+       function textOperation(op)
+    </script>
 </body>
 </html>
