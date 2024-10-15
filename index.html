@@ -16,7 +16,7 @@
             font-size: 25px;
             border-radius: 20px;
             border: 2px solid hsl(330, 76%, 52%);
-            font-family:Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .heading {
@@ -66,37 +66,27 @@
         const inputElement = document.getElementById("input");
         const outputElement = document.getElementById("output");
 
-       // function upperCase() {
-         //   const inputText = inputElement.value;
-           // outputElement.value = inputText.toUpperCase();
-        //}
+
 
         function textOperation(op) {
-         //   const inputElement = document.getElementById('inputBox');
-           // const outputElement = document.getElementById('outputBox');
-
-            //if(op=='uppercase'){
-              //  const inputText = inputElement.value;
-                //outputElement.value = inputText.toUpperCase();
-            //}
 
             switch (op) {
                 case 'uppercase':
                     outputElement.value = inputElement.value.toUpperCase();
-                   break;
+                    break;
                 case 'lowerCase':
                     outputElement.value = inputElement.value.toLowerCase();
                     break;
                 case 'wordCount':
                     const totalWords = inputElement.value.split(" ").length;
-                  outputElement.value = `Word Count: ${totalWords}`
+                    outputElement.value = `Word Count: ${totalWords}`
                     break;
                 case 'charCount':
                     const totalCharCount = inputElement.value.length;
                     outputElement.value = `Character Count: ${totalCharCount}`
-                   break;
+                    break;
             }
-     }
+        }
     </script>
 </body>
 
